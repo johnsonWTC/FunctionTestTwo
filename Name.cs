@@ -19,7 +19,7 @@ namespace FunctionTestTwo
            
            
 
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult($"{name}, hello man");
         }
     }
 }
