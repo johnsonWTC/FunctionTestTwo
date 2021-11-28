@@ -16,9 +16,7 @@ namespace FunctionTestTwo
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,string name)
         {
-           
-           
-
+          
             return new OkObjectResult($"{name}, hello man");
         }
     }
