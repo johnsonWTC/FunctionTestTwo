@@ -16,15 +16,8 @@ namespace FunctionTestTwo
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,string name)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
-
-            string name = req.Query["name"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            string responseMessage = "Jay ";
+           
+           
 
             return new OkObjectResult(responseMessage);
         }
